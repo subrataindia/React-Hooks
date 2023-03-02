@@ -12,8 +12,10 @@ function reducer(state, action) {
   }
 }
 
+const initialState = { count: 0 };
+
 function App() {
-  const [state, dispatch] = useReducer(reducer, { count: 0 });
+  const [state, dispatch] = useReducer(reducer, initialState);
   return (
     <>
       <button onClick={() => dispatch({ type: "increment" })}>+</button>
@@ -24,5 +26,4 @@ function App() {
 }
 
 export default App;
-
 ```
